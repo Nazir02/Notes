@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.MaterialComponents.DayNight"
+    tools:context=".view.AddFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        app:boxStrokeColor="@color/black"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:hint="Название"
+        android:textColorHint="@color/black"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        app:layout_constraintBottom_toTopOf="@id/subTitleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/titleTextAdd"
+            android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColorHint="@color/black"
+            android:maxLines="1"
+            android:textSize="20sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/subTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:hint="Примичения"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:textColorHint="@color/black"
+        app:boxStrokeColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/locationInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleText" >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/subTitleTextAdd"
+            android:gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:textColorHint="@color/black"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/locationInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:gravity="center"
+        android:hint="Локация"
+        android:textColorHint="@color/black"
+        app:startIconDrawable="@drawable/ic_baseline_add_location_alt_24"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subTitleTextView" >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/location"
+            android:gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="false"
+            android:layout_margin="5dp"
+            android:textColorHint="@color/black"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dataTimeInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:hint="Дата "
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:textColorHint="@color/black"
+        android:textSize="24sp"
+        app:startIconDrawable="@drawable/ic_baseline_more_time_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/locationInput">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dataTime"
+            android:gravity="top"
+            android:layout_width="match_parent"
+            android:focusable="false"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:textColorHint="@color/black"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dataTimeInput">
+
+        <ImageView
+            android:id="@+id/ImegViewAdd1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/photo_camera_24" />
+
+
+        <ImageView
+            android:id="@+id/ImegViewAdd2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/photo_camera_24" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
